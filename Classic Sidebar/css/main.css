@@ -1,0 +1,86 @@
+:root {
+    --mainColor: #6696ee;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section {
+    width: 350px;
+    margin: 10px auto;
+    padding: 25px 35px;
+    border: 2px solid var(--mainColor);
+}
+section > div {
+    position: relative;
+    margin-block: 45px;
+}
+section div .heading {
+    width: fit-content;
+    margin-bottom: 25px;
+    position: relative;
+}
+section div .heading::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: -85px;
+    width: 70px;
+    height: 2px;
+    background-color: var(--mainColor);
+}
+section .list ul li {
+    list-style: none;
+    margin: 40px 0;
+    color: #6e6b66;
+    position: relative;
+}
+section .list ul li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+}
+section .list ul li::after {
+    content: attr(data);
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    padding: 5px;
+    background-color: #ddd;
+    color: #000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+section .gallery .content {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+section .gallery .content img {
+    border: 2px solid var(--mainColor);
+    width: calc((100% - 20px) / 3);
+    height: 85px;
+}
+section .archives ul {
+    margin-left: 17px;
+}
+section .archives ul li {
+    padding-left: 15px;
+    margin-block: 30px;
+}
+section .archives ul li::marker {
+    content: "\f07b";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    color: var(--mainColor);
+}

@@ -1,0 +1,122 @@
+:root {
+    --mainColor: #2f6574;
+    --secColor: #f94b02;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main {
+    width: 70%;
+    margin: 90px auto;
+    padding: 25px;
+    background-color: #f7f7f7;
+}
+.main h2 {
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    left: -40px;
+    background-color: var(--mainColor);
+    color: #fff;
+}
+.main h2:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    border: 15px solid;
+    border-color: transparent var(--mainColor) transparent transparent;
+}
+.main .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px 15px;
+    margin-top: 25px;
+}
+.main .products .prod {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border: 3px solid var(--mainColor);
+}
+.main .products .special::before {
+    content: "Sale!";
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secColor);
+    color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 1;
+}
+.main .products .prod img {
+    width: 90%;
+    margin-bottom: 15px;
+}
+.main .products .prod > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.main .products .prod div h5 {
+    color: #777;
+}
+.main .products .prod div span:not(.sale) {
+    color: #0d79af;
+    margin-inline: 5px;
+    font-weight: bold;
+    position: relative;
+}
+.main .products .prod div span:not(.sale)::before,
+.main .products .prod div span:not(.sale)::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 3px;
+    background-color: #777;
+    top: 7px;
+}
+.main .products .prod div span:not(.sale)::before {
+    left: -140%;
+}
+.main .products .prod div span:not(.sale)::after {
+    right: -140%;
+}
+.main .products .special div span:not(.sale)::before,
+.main .products .special div span:not(.sale)::after {
+    width: 90%;
+}
+.main .products .special div span:not(.sale)::before {
+    left: -210%;
+}
+.main .products .special div span:not(.sale)::after {
+    right: -100%;
+}
+.main .products .prod div div span.sale {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: -5px;
+    margin-left: 5px;
+}
+.main .products .prod div div span.sale + span {
+    color: var(--secColor);
+}

@@ -1,0 +1,124 @@
+:root {
+    --cBlue: #2c6ccf;
+    --cRed: #cf2c2c;
+    --cGreen: #309e0e;
+    --cYellow: #cd661a;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div h3 {
+    margin-left: 10px;
+    font: bold 30px sans-serif;
+    text-decoration: underline;
+}
+div span {
+    display: block;
+    margin: 30px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+div span::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 0;
+    z-index: 1;
+}
+div span::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 170px;
+    height: 2px;
+    z-index: -1;
+}
+.blue {
+    color: var(--cBlue);
+}
+.red {
+    color: var(--cRed);
+}
+.green {
+    color: var(--cGreen);
+}
+.yellow {
+    color: var(--cYellow);
+}
+.blue::before {
+    background-color: var(--cBlue);
+}
+.red::before {
+    background-color: var(--cRed);
+}
+.green::before {
+    background-color: var(--cGreen);
+}
+.yellow::before {
+    background-color: var(--cYellow);
+}
+.blue::after {
+    background: linear-gradient(90deg, var(--cBlue) 50%, #ccc 50%);
+}
+.red::after {
+    background: linear-gradient(90deg, var(--cRed) 50%, #ccc 50%);
+}
+.green::after {
+    background: linear-gradient(90deg, var(--cGreen) 50%, #ccc 50%);
+}
+.yellow::after {
+    background: linear-gradient(90deg, var(--cYellow) 50%, #ccc 50%);
+}
+.circle span::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.sq span::before {
+    width: 10px;
+    height: 10px;
+}
+.tri-up span::before,
+.tri-dn span::before {
+    border: 10px solid;
+    background-color: unset !important;
+}
+.tri-up span::before {
+    top: 15px;
+}
+.tri-up .blue::before {
+    border-color: transparent transparent var(--cBlue) transparent;
+}
+.tri-up .red::before {
+    border-color: transparent transparent var(--cRed) transparent;
+}
+.tri-up .green::before {
+    border-color: transparent transparent var(--cGreen) transparent;
+}
+.tri-up .yellow::before {
+    border-color: transparent transparent var(--cYellow) transparent;
+}
+.tri-dn span::before {
+    bottom: -34px;
+    top: unset;
+}
+.tri-dn .blue::before {
+    border-color: var(--cBlue) transparent transparent transparent;
+}
+.tri-dn .red::before {
+    border-color: var(--cRed) transparent transparent transparent;
+}
+.tri-dn .green::before {
+    border-color: var(--cGreen) transparent transparent transparent;
+}
+.tri-dn .yellow::before {
+    border-color: var(--cYellow) transparent transparent transparent;
+}

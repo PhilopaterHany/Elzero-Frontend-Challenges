@@ -1,0 +1,99 @@
+:root {
+    --mainColor: #3b74ba;
+}
+body {
+    background-color: #ddd;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+section img {
+    z-index: 1;
+    margin-bottom: -25px;
+}
+section .box {
+    width: 600px;
+    height: 390px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    position: relative;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+section .box::before {
+    content: "Recommended";
+    position: absolute;
+    bottom: -17px;
+    right: 30px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+section .box::after {
+    content: "A+";
+    position: absolute;
+    top: -17px;
+    left: 30px;
+    background-color: var(--mainColor);
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+section .box h1 {
+    margin: 20px 0 10px;
+    color: var(--mainColor);
+    letter-spacing: 5px;
+    font: bold 26px sans-serif;
+    text-transform: uppercase;
+}
+section .box h4 {
+    color: #978888;
+    position: relative;
+}
+section .box h4::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -170px;
+    width: 320%;
+    height: 2px;
+    background-color: var(--mainColor);
+}
+section .box div {
+    width: 85%;
+    height: 20px;
+    margin-top: 30px;
+    margin-left: 12px;
+    padding: 25px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}

@@ -1,0 +1,93 @@
+:root {
+    --mainColor: #03a9f4;
+    --mainBlack: #242424;
+    --mainGrey: #2a2a2a;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section {
+    width: 1200px;
+    margin: 35px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    width: 25%;
+    height: 500px;
+    border-collapse: collapse;
+}
+table thead tr th,
+table tfoot tr td {
+    border-inline: 1px solid #363636;
+}
+table tbody tr td {
+    padding: 15px 0;
+    text-align: center;
+    border: 1px solid #363636;
+}
+table.special tbody tr td {
+    border: 1px solid #2eb7f5;
+}
+table:not(.special) tbody tr:nth-child(odd) td {
+    background-color: var(--mainBlack);
+    color: #645d5b;
+}
+table:not(.special) tbody tr:nth-child(even) td {
+    background-color: var(--mainGrey);
+    color: #645d5b;
+}
+table.special {
+    background-color: var(--mainColor);
+    color: #fff;
+    box-shadow: 0 25px 0 0 var(--mainColor), 0 -25px 0 0 var(--mainColor);
+}
+table thead tr th {
+    padding: 50px 10px;
+    background-color: var(--mainBlack);
+    color: #fff;
+    line-height: 2.2;
+    font-size: 24px;
+}
+table.special thead tr th,
+table.special tfoot tr td {
+    border: 1px solid transparent;
+}
+table tfoot tr td {
+    padding: 50px 10px;
+    background-color: var(--mainBlack);
+    text-align: center;
+}
+table.special thead tr th,
+table.special tfoot tr td {
+    background-color: var(--mainColor);
+}
+table tfoot tr td button {
+    border: 1px solid #fff;
+    outline: none;
+    background: linear-gradient(
+        to left,
+        var(--mainBlack) 50%,
+        var(--mainColor) 50%
+    );
+    background-position: right;
+    background-size: 200%;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+table tfoot tr td button:hover {
+    background-position: left;
+}
+table.special tfoot tr td button {
+    background: var(--mainColor);
+}
