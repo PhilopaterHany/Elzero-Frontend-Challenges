@@ -1,0 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    height: 5000px;
+    background-color: #777;
+}
+a {
+    background-color: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    font: bold 18px sans-serif;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}

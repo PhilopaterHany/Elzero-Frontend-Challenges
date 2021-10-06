@@ -1,0 +1,93 @@
+:root {
+    --mainColor: #ff5722;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body {
+    background-color: #989898;
+}
+table {
+    width: 90%;
+    margin: 15px auto;
+    border-collapse: collapse;
+}
+table tr td {
+    width: 100px;
+    padding: 17px 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+table tr td:first-child {
+    color: #8b8787;
+}
+table tr th {
+    padding: 20px 10px;
+    color: #fff;
+    background-color: var(--mainColor);
+}
+table tr {
+    background-color: #fafafa;
+}
+table tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+table tr td span.price {
+    color: var(--mainColor);
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+}
+table tr td span.price::before,
+table tr td span.price::after {
+    position: absolute;
+    top: 0;
+    color: #000;
+    font-size: 16px;
+}
+table tr td span.price::before {
+    content: "$";
+    left: -12px;
+}
+table tr td span.price::after {
+    content: ".99";
+    right: -25px;
+}
+@media (max-width: 767px) {
+    table tr td span.price {
+        font-size: 32px;
+    }
+    table tr td span.price::before {
+        left: -10px;
+    }
+}
+table tr td .fa-times {
+    color: #b00020;
+}
+table tr td .fa-check {
+    color: #009688;
+}
+table tr td a {
+    display: inline-block;
+    position: relative;
+    width: 75px;
+    height: 35px;
+    padding: 10px 15px;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 #ccc;
+    background: linear-gradient(to left, #333 50%, var(--mainColor) 50%) right;
+    background-size: 200%;
+    color: #fff;
+    transition: 0.15s ease-out;
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -ms-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+}
+table tr td a:hover {
+    background-position: left;
+}

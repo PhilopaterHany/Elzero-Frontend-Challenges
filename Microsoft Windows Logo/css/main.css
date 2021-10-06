@@ -1,0 +1,27 @@
+:root {
+    --mainGreen: #7fba00;
+    --mainBlue: #00a4ef;
+    --mainYellow: #ffb900;
+    --mainRed: #f25022;
+}
+div {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 250px 40% 0;
+    background-color: var(--mainBlue);
+    box-shadow: 0 -152px 0 0 var(--mainRed), 152px -152px 0 0 var(--mainGreen),
+        152px 0 0 0 var(--mainYellow);
+    z-index: -1;
+}
+div::after {
+    /* You can remove the ::after to see the full logo */
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 70%;
+    left: 67%;
+    background-color: #787878;
+    z-index: 2;
+}

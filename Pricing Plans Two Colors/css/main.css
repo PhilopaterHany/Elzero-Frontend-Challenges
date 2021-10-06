@@ -1,0 +1,116 @@
+:root {
+    --mainColor: #1998ff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yaldevi", sans-serif;
+}
+.main {
+    width: 710px;
+    margin: 0 auto;
+    padding: 10px 0 18px;
+    background-color: #817c7c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main table {
+    width: calc(50% - 40px);
+    margin: 30px 10px 0;
+    text-align: center;
+    border-collapse: collapse;
+}
+.main table:first-child {
+    background-color: var(--mainColor);
+}
+.main table:last-child {
+    background-color: #fff;
+}
+.main table thead tr th {
+    position: relative;
+    padding: 80px 0 15px;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.main table:first-child tr {
+    color: #fff;
+}
+.main table thead tr th::before {
+    position: absolute;
+    top: -35px;
+    left: 110px;
+    width: 80px;
+    height: 80px;
+    line-height: 2.6;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    border: 7px solid #fff;
+    letter-spacing: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.main table thead tr th::after {
+    content: "/month";
+    position: absolute;
+    top: 20px;
+    left: 134px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: lowercase;
+    letter-spacing: 0;
+}
+.main table:first-child thead tr th::before {
+    content: "$174";
+    background-color: var(--mainColor);
+}
+.main table:last-child thead tr th::before {
+    content: "$269";
+    background-color: #545454;
+}
+.main table tbody tr td {
+    padding-block: 15px;
+}
+.main table tbody tr:last-child td {
+    padding-block: 30px;
+}
+.main table:first-child tbody tr td {
+    border-block: 1px solid #178ded;
+}
+.main table:last-child tbody tr td {
+    border-block: 1px solid #ededed;
+}
+.main table tbody tr td button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.main table:first-child tbody tr td button {
+    background-color: #fff;
+    color: var(--mainColor);
+}
+.main table:last-child tbody tr td button {
+    background-color: var(--mainColor);
+    color: #fff;
+}
+@media (max-width: 710px) {
+    .main {
+        width: 100%;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .main table thead tr th::before {
+        left: 100px;
+    }
+    .main table thead tr th::after {
+        left: 123px;
+    }
+}
