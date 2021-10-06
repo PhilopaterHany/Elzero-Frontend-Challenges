@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container {
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 738px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 962px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+section {
+    background-color: #333;
+    color: #777;
+    padding-block: 15px;
+}
+section .container {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    gap: 40px;
+}
+section .container div h3 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+section .container div .nums {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 30px;
+}
+section .container div .nums h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+section .container div .nums span {
+    color: #fff;
+}
+section .container div ul li {
+    list-style: none;
+    margin-block: 10px;
+}
+section .container div form {
+    margin-block: 15px;
+}
+section .container div form input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: #777;
+    color: #fff;
+}
+section .container div form button {
+    margin-left: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #f00;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+}
+section .container div div .social {
+    display: flex;
+    margin-top: 15px;
+}
+section .container div div .social div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-inline: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+section .container div div .social div:first-child {
+    background-color: #3b5998;
+}
+section .container div div .social div:nth-child(2) {
+    background-color: #5da9dd;
+}
+section .container div div .social div:nth-child(3) {
+    background-color: #1b1f23;
+}
+section .container div div .social div:nth-child(4) {
+    background-color: #f00;
+}
+section .container div div .social div:last-child {
+    background-color: #800080;
+}
+section .container div div .social div a {
+    text-decoration: none;
+    color: #fff;
+}
+footer {
+    background-color: #222;
+    color: #fff;
+    padding-block: 15px;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .container div span {
+    font-weight: bold;
+}
+footer .container div i {
+    color: #dc143c;
+}
+footer .container div img {
+    width: 100px;
+    height: 30px;
+}
+@media (max-width: 768px) {
+    section .container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    section .container div form button {
+        padding: 10px 42px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    section .container div div .social {
+        justify-content: center;
+    }
+}
+@media (max-width: 991px) {
+    section .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    section .container div:nth-child(2),
+    section .container div:nth-child(3) {
+        text-align: center;
+    }
+    footer .container {
+        flex-direction: column-reverse;
+    }
+    footer .container div:first-child {
+        margin-top: 15px;
+        text-align: center;
+    }
+    footer .container div:last-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 30px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    section .container div form button {
+        padding: 10px 42px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}

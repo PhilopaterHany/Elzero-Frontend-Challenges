@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div {
+    margin: 50px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #ddd 50%, #343a40 50%);
+    border: 12px solid;
+    border-image: linear-gradient(90deg, #343a40 50%, #ffffff 50%);
+    border-image-slice: 1;
+}
+img {
+    width: 150px;
+}
