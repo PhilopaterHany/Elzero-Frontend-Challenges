@@ -20,6 +20,7 @@
 | [Bitcoin Dashboard](https://elzero.org/frontend-bitcoin-dashboard/) | No Live Preview Yet |
 | [Food Menu & Sidebar](https://elzero.org/frontend-food-menu-and-sidebar/) | No Live Preview Yet |
 | [Product Box With Progress](https://elzero.org/frontend-product-box-with-progress/) | No Live Preview Yet |
+| [Picture With Frame](https://elzero.org/frontend-picture-with-frame/) | No Live Preview Yet |
 | [Blue Signup Form](https://elzero.org/frontend-blue-signup-form/) | [Live Preview](https://philopaterhany.github.com/Frontend-Challenges/blob/main/Blue%20Signup%20Form/index.html) |
 | [Classic Sidebar](https://elzero.org/frontend-classic-sidebar/) | [Live Preview](https://philopaterhany.github.com/Frontend-Challenges/blob/main/Classic%20Sidebar/index.html) |
 | [Awesome Contact Section](https://elzero.org/frontend-awesome-contact-section/) | No Live Preview Yet |
