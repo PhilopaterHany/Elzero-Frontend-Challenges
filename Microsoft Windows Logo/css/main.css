@@ -15,7 +15,7 @@ span {
         152px 0 0 0 var(--mainYellow);
     z-index: -1;
 }
-div::after {
+span::after {
     /* You can remove the ::after to see the full logo */
     content: "";
     width: 100px;
