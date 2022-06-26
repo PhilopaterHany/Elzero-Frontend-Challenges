@@ -6,10 +6,10 @@
 }
 span {
     display: block;
-    position: relative;
     width: 150px;
     height: 150px;
-    margin: 250px 40% 0;
+    margin: 50px auto;
+    position: relative;
     background-color: var(--mainBlue);
     box-shadow: 0 -152px 0 0 var(--mainRed), 152px -152px 0 0 var(--mainGreen),
         152px 0 0 0 var(--mainYellow);
