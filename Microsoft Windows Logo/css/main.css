@@ -4,7 +4,8 @@
     --mainYellow: #ffb900;
     --mainRed: #f25022;
 }
-div {
+span {
+    display: block;
     position: relative;
     width: 150px;
     height: 150px;
