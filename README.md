@@ -1,6 +1,6 @@
 ## HTML + CSS + JS Challenges From [Elzero Web School](https://elzero.org/category/challenges/front-end-challenges/)
 
-|                                          Assignment                                           |                                                    Live Preview                                                    | Difficulty |      Required Skills       |
+|                                          Challenge                                           |                                                    Live Preview                                                    | Difficulty |      Required Skills       |
 | :-------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: | :--------: | :------------------------: |
 |       [Team Stats & Skills](https://elzero.org/frontend-team-skills-and-stats-design/)        |    [Live Preview](https://philopaterhany.github.io/Frontend-Challenges/Team%20Stats%20%26%20Skills/index.html)     | Very Easy  |         HTML + CSS         |
 |     [Card With Transparent Image](https://elzero.org/frontend-card-with-transparent-img/)     | [Live Preview](https://philopaterhany.github.io/Frontend-Challenges/Card%20With%20Transparent%20Image/index.html)  | Very Easy  |         HTML + CSS         |
