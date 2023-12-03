@@ -10,29 +10,31 @@
     --insta: #800080;
     --github: #1b1f23;
     --linkedin: #0077b5;
-    --mainPadding: 20px;
-    --mainDuration: 0.5s;
+    --mainPadding: 50px;
+    --mainDuration: 0.25s;
 }
 ::selection {
     color: #fff;
     background: #000;
 }
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #fff;
+    background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--Cyan);
-}
-html {
-    scroll-behavior: smooth;
+    background-color: var(--Cyan);
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
     font-family: "Open Sans", sans-serif;
 }
 .container {
@@ -54,8 +56,15 @@ html {
         width: 1170px;
     }
 }
-header {
+header,
+footer {
+    padding: calc(var(--mainPadding) / 2) 0;
+}
+section {
     padding: var(--mainPadding) 0;
+}
+section:nth-of-type(odd) {
+    background-color: var(--Grey);
 }
 header .container {
     display: flex;
@@ -67,7 +76,7 @@ header .container div.comp-name {
     font-weight: bold;
 }
 header .container div span {
-    margin: 0 10px;
+    margin: 0 5px;
     position: relative;
 }
 header .container div span::before,
@@ -78,11 +87,11 @@ header .container div span::after {
     width: 0;
     height: 2px;
     background-color: var(--Cyan);
-    transition: var(--mainDuration) linear;
     -webkit-transition: var(--mainDuration) linear;
     -moz-transition: var(--mainDuration) linear;
     -ms-transition: var(--mainDuration) linear;
     -o-transition: var(--mainDuration) linear;
+    transition: var(--mainDuration) linear;
 }
 header .container div span::after {
     top: -2px;
@@ -96,10 +105,6 @@ header .container div span a {
     color: unset;
     text-decoration: none;
 }
-section.services {
-    padding: var(--mainPadding) 0;
-    background-color: var(--Grey);
-}
 section.services .container {
     display: flex;
     justify-content: center;
@@ -112,15 +117,17 @@ section.services .container h1 span {
 section.services .container p {
     text-align: center;
     line-height: 1.8;
-    padding: var(--mainPadding) 0;
-}
-section.serv {
-    padding: var(--mainPadding) 0;
+    padding: 15px 0;
 }
 section.serv .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 50px;
+}
+@media (max-width: 767px) {
+    section.serv .container {
+        gap: 80px;
+    }
 }
 section.serv .container div {
     text-align: center;
@@ -128,51 +135,55 @@ section.serv .container div {
 section.serv .container div img {
     width: 80px;
 }
-section.serv .container div p {
-    color: #777;
+section.serv .container div h4 {
+    margin-block: 10px;
 }
-section.about {
-    padding: var(--mainPadding) 0;
-    background-color: var(--Grey);
+section.serv .container div p {
+    font-size: 15px;
+    color: #777;
+    text-wrap: balance;
+    line-height: 1.25;
 }
 section.about .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
-@media (max-width: 767px) {
+section.about .container img {
+    width: 450px;
+}
+section.about .container div {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 80px;
+}
+section.about .container div p {
+    line-height: 1.75;
+}
+@media (max-width: 991px) {
     section.about .container {
         flex-direction: column;
     }
     section.about .container div {
-        width: unset !important;
+        text-align: center;
+        gap: 30px;
     }
 }
-section.about .container img {
-    width: 320px;
-    height: 220px;
-}
-section.about .container div {
-    display: inline-block;
-    margin-left: 30px;
-    padding: var(--mainPadding) 0;
-    width: calc(100% - 355px);
-}
-section.about .container div p {
-    margin-top: 30px;
-    line-height: 1.8;
-}
-section.nums {
-    padding: var(--mainPadding) 0;
+@media (max-width: 500px) {
+    section.about .container img {
+        width: 300px;
+    }
 }
 section.nums .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 50px;
 }
 section.nums .container div {
-    margin-block: 15px;
-    padding: var(--mainPadding);
+    padding: 20px 30px;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -189,12 +200,9 @@ section.nums .container div:last-child {
     background-color: var(--Green);
 }
 section.nums .container div p {
-    font-size: 26px;
+    font-size: 48px;
     font-weight: bold;
-}
-section.skills {
-    padding: var(--mainPadding) 0;
-    background-color: var(--Grey);
+    margin-bottom: 10px;
 }
 section.skills .container h1 {
     text-align: center;
@@ -203,16 +211,16 @@ section.skills .container div {
     margin-block: 20px;
     position: relative;
     left: 100px;
-    background-color: #ccc;
+    background-color: #fff;
     width: calc(100% - 100px);
     height: 35px;
 }
 section.skills .container div::before {
     content: attr(data-lang);
     position: absolute;
-    top: 5px;
-    left: -110px;
-    width: 100px;
+    top: 7px;
+    right: 102%;
+    max-width: 100px;
     text-align: right;
     font-size: 18px;
 }
@@ -222,10 +230,13 @@ section.skills .container div span {
     height: 100%;
     padding-left: 20px;
     background-color: var(--Cyan);
-    color: #fff;
+    position: relative;
 }
-section.contact {
-    padding: var(--mainPadding) 0;
+section.skills .container div span::before {
+    content: attr(data-prog);
+    position: absolute;
+    right: 5px;
+    color: #fff;
 }
 section.contact .container h1 {
     text-align: center;
@@ -237,7 +248,6 @@ section.contact .container div.icons {
     margin: 50px 0;
 }
 footer {
-    padding: var(--mainPadding) 0;
     background-color: var(--DarkGrey);
 }
 footer .container {
