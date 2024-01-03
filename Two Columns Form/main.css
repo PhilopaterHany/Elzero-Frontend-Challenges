@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+.main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid:
+        "username phone"
+        "password brief"
+        "email brief"
+        "btn btn";
+    gap: 35px;
+    background-color: #eee;
+}
+@media (max-width: 767px) {
+    .main {
+        grid: "username" "phone" "password" "brief" "email" "btn";
+        gap: 45px;
+    }
+}
+.main > div {
+    margin-bottom: 10px;
+}
+.main .user {
+    grid-area: username;
+}
+.main .phone {
+    grid-area: phone;
+}
+.main .email {
+    grid-area: email;
+}
+.main .brief {
+    grid-area: brief;
+}
+.main .btn {
+    grid-area: btn;
+}
+.main div label {
+    display: block;
+    margin-bottom: 5px;
+}
+.main div:not(.phone, .brief) label::after {
+    content: " *";
+    color: #f00;
+}
+.main div input {
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+}
+.main div input[type="number"]::-webkit-outer-spin-button,
+.main div input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.main .brief textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.main .btn {
+    margin-top: 15px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #009688;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.main .btn:hover {
+    filter: brightness(80%);
+    -webkit-filter: brightness(80%);
+}
