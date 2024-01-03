@@ -6,7 +6,7 @@
     --Green: #1d870e;
     --Red: #ff1716;
     --sectionMargin: 15px 0;
-    --sectionPadding: 10px;
+    --sectionPadding: 20px;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -21,27 +21,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
     font-family: "Cairo", sans-serif;
 }
 .secHead {
-    background-color: var(--HeadBG);
-    padding: var(--sectionPadding);
+    padding: 10px 15px;
+    margin-block: 0 20px;
+    font-size: 26px;
     width: fit-content;
     color: #fff;
+    background-color: var(--HeadBG);
 }
 .secHead img {
     width: 25px;
     height: 25px;
-    transform: translate(2px, 5px);
-    -webkit-transform: translate(2px, 5px);
-    -moz-transform: translate(2px, 5px);
-    -ms-transform: translate(2px, 5px);
-    -o-transform: translate(2px, 5px);
 }
 body {
     display: flex;
     justify-content: center;
-    background-color: #acacac;
+    background-color: #ddd;
 }
 .main section {
     margin: var(--sectionMargin);
@@ -63,9 +62,9 @@ body {
     background-color: #f1f1f1;
 }
 .main .home::after {
-    content: "130 days in the ship";
+    content: "130 days in ship";
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: 5px;
     text-transform: capitalize;
     color: var(--Teal);
@@ -78,19 +77,20 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    gap: 15px;
 }
 .main .home div:first-child img {
     display: block;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border-radius: 50%;
 }
 .main .home div:first-child .lvl {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
 }
 .main .home div:first-child .prog-bar {
@@ -99,27 +99,31 @@ body {
     align-items: center;
     position: relative;
     background-color: #f1f1f1;
-    width: 200px;
+    width: 190px;
     height: 20px;
-    border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    border-radius: 5px;
 }
 .main .home div:first-child .prog-bar span {
     background-color: var(--Teal);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     align-self: flex-start;
     height: 100%;
-    border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.main .home div:first-child > p {
+    text-align: center;
+    font-size: 15px;
+}
+.main .home div:first-child > p span {
+    color: var(--Teal);
+    font-weight: bold;
 }
 .main .home div:last-child {
     width: 70%;
@@ -130,9 +134,10 @@ body {
 }
 .main .home div:last-child .name {
     color: var(--Teal);
+    margin-block: 0;
 }
 .main .home div :last-child.description {
-    margin-top: 30px;
+    line-height: 2;
 }
 @media (max-width: 767px) {
     .main section:first-child {
@@ -140,7 +145,7 @@ body {
         align-items: center;
     }
     .main .home::before {
-        top: 265px;
+        top: 280px;
         left: 0;
         height: 2px;
         width: 100%;
@@ -153,19 +158,20 @@ body {
         width: 85%;
     }
     .main .home div:last-child {
+        width: 100%;
         align-self: flex-start;
-        margin-block: 35px;
+        margin: 30px 0 20px 0;
     }
-    .main .home div:last-child .name {
-        font-size: 36px;
-    }
-    .main .home div:last-child .description {
-        margin-top: -10px;
+    .main .home div :last-child.description {
+        line-height: 1.5;
     }
 }
 .main .pts-log p {
     font-size: 20px;
     margin-block: 20px;
+}
+.main .pts-log p:last-of-type {
+    margin-bottom: 0;
 }
 .main .pts-log span:last-child {
     color: var(--Magenta);
@@ -205,7 +211,7 @@ body {
     justify-content: space-between;
     align-items: unset;
     flex-flow: row wrap;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .main .powers div label {
     font-size: 20px;
@@ -214,7 +220,7 @@ body {
 .main .powers div span {
     font-weight: bold;
     font-size: 20px;
-    color: var(--Green);
+    margin-inline-end: 3px;
 }
 .main .powers div span {
     color: var(--Teal);
