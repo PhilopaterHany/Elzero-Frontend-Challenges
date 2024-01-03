@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
     font-family: sans-serif;
 }
 .container {
@@ -24,30 +26,36 @@
     }
 }
 section {
-    background-color: #333;
+    padding-block: 50px;
     color: #777;
-    padding-block: 15px;
+    background-color: #333;
 }
 section .container {
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
-    gap: 40px;
+    gap: 80px;
 }
 section .container div h3 {
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+}
+section p,
+section li,
+section .container div .nums span,
+section .container div div span {
+    font-size: 15px;
 }
 section .container div .nums {
-    margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px 30px;
+    margin-top: 30px;
 }
 section .container div .nums h6 {
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 5px;
 }
 section .container div .nums span {
@@ -59,28 +67,39 @@ section .container div ul li {
 }
 section .container div form {
     margin-block: 15px;
+    display: flex;
+    gap: 5px;
 }
 section .container div form input {
     padding: 10px;
-    outline: none;
-    border: none;
-    background-color: #777;
-    color: #fff;
+    background-color: #4c4c4c;
+    flex: 1;
+}
+section .container div form input::placeholder {
+    color: #ccc;
 }
 section .container div form button {
-    margin-left: 5px;
-    padding: 10px;
-    outline: none;
-    border: none;
+    padding: 10px 20px;
+    text-align: center;
     cursor: pointer;
     background-color: #f00;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+}
+section .container div form button,
+section .container div form input {
+    font-size: 14px;
+    outline: none;
+    border: none;
     color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
 }
 section .container div div .social {
     display: flex;
-    margin-top: 15px;
+    gap: 10px;
+    margin-top: 5px;
 }
 section .container div div .social div {
     display: flex;
@@ -88,12 +107,11 @@ section .container div div .social div {
     align-items: center;
     width: 30px;
     height: 30px;
-    margin-inline: 5px;
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border-radius: 50%;
 }
 section .container div div .social div:first-child {
     background-color: #3b5998;
@@ -111,13 +129,14 @@ section .container div div .social div:last-child {
     background-color: #800080;
 }
 section .container div div .social div a {
-    text-decoration: none;
+    font-size: 14px;
     color: #fff;
+    text-decoration: none;
 }
 footer {
-    background-color: #222;
-    color: #fff;
     padding-block: 15px;
+    color: #aaa;
+    background-color: #222;
 }
 footer .container {
     display: flex;
@@ -125,10 +144,8 @@ footer .container {
     align-items: center;
 }
 footer .container div span {
+    color: #fff;
     font-weight: bold;
-}
-footer .container div i {
-    color: #dc143c;
 }
 footer .container div img {
     width: 100px;
@@ -152,9 +169,11 @@ footer .container div img {
     section .container {
         grid-template-columns: 1fr 1fr;
     }
-    section .container div:nth-child(2),
-    section .container div:nth-child(3) {
+    section .container div {
         text-align: center;
+    }
+    section .container div div .social {
+        justify-content: center;
     }
     footer .container {
         flex-direction: column-reverse;
