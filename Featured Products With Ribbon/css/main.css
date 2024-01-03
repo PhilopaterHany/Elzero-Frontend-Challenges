@@ -6,13 +6,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
     font-family: sans-serif;
+    background-color: #ddd;
 }
 .main {
     width: 70%;
     margin: 90px auto;
     padding: 25px;
-    background-color: #f7f7f7;
+    background-color: #fff;
 }
 .main h2 {
     display: inline-block;
@@ -40,9 +43,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     flex-direction: column;
     position: relative;
-    border: 3px solid var(--mainColor);
+    border: 7px solid #999;
 }
 .main .products .special::before {
     content: "Sale!";
@@ -58,16 +62,16 @@
     align-items: center;
     background-color: var(--secColor);
     color: #fff;
-    border-radius: 50%;
+    z-index: 1;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    z-index: 1;
+    border-radius: 50%;
 }
 .main .products .prod img {
-    width: 90%;
-    margin-bottom: 15px;
+    width: 100%;
+    flex: 1;
 }
 .main .products .prod > div {
     display: flex;
@@ -90,10 +94,10 @@
 .main .products .prod div span:not(.sale)::after {
     content: "";
     position: absolute;
+    top: 8px;
     width: 120%;
     height: 3px;
-    background-color: #777;
-    top: 7px;
+    background-color: #999;
 }
 .main .products .prod div span:not(.sale)::before {
     left: -140%;
@@ -103,19 +107,18 @@
 }
 .main .products .special div span:not(.sale)::before,
 .main .products .special div span:not(.sale)::after {
-    width: 90%;
+    width: 80%;
 }
 .main .products .special div span:not(.sale)::before {
-    left: -210%;
+    left: -190%;
 }
 .main .products .special div span:not(.sale)::after {
     right: -100%;
 }
 .main .products .prod div div span.sale {
-    text-decoration: line-through;
+    font-size: 14px;
     color: #777;
-    margin-right: -5px;
-    margin-left: 5px;
+    text-decoration: line-through;
 }
 .main .products .prod div div span.sale + span {
     color: var(--secColor);
